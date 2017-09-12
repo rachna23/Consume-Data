@@ -1,25 +1,24 @@
+# This will get the list of all doctors
 class DoctorsController < ApplicationController
-
-	def get_host
+	def host
 		ENV['HOST']
 	end 
 
-	def get_user_key
+	def user_key
 		ENV['USER_ID']
 	end 
 
-	def select_state
-	end	
+	def select_state; end	
 
-	def get_doctors
-		location = params["select_tag_value"]
+	def doctors
+		location = params['select_tag_value']
 		begin
-			resp = RestClient.get("#{get_host}?location=#{location}&limit=10&user_key=#{get_user_key}", {'Accept' => 'application/json'}){ |response, request, result| response }
+			resp = RestClient.get("#{host}?location=#{location}&limit=10&user_key=#{user_key}")
 			@response = JSON.parse(resp)
     	respond_to do |format|
 	     format.js 
 	    end  
-		rescue Exception => e
+		rescue StandardError => e
 			p e.message
 		end	
 	end	

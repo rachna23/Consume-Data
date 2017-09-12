@@ -1,0 +1,6 @@
+<% if @response["data"].present? %>
+ $('#div1').html('<%=  escape_javascript(render :partial => 'doctors/doctors', :locals => {:response => @response}) %>');
+<% else %>
+  alert('<%= @response["meta"]["message"] %>');
+<% end %>
+

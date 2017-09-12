@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps for running the project.
 
-Things you may want to cover:
+* Ruby version: ruby-2.3.1
 
-* Ruby version
+* Rails version: 5.0.6
 
-* System dependencies
+* Database: mysql
 
-* Configuration
+* Steps for running the project
 
-* Database creation
+1. git clone url
 
-* Database initialization
+2. bundle install
 
-* How to run the test suite
+3. rake db:create
 
-* Services (job queues, cache servers, search engines, etc.)
+4. start server on localhost
 
-* Deployment instructions
+* For running the test cases:  bundle exec rspec
 
-* ...
+
