@@ -1,0 +1,20 @@
+<%#= get_state_lists %>
+<%#= select_tag "countries", options_for_select(get_state_lists)
+                                 %>
+
+<%= select_tag "countries", options_for_select(get_state_lists) %>
+<div id= "div1"></div>
+
+
+<script>
+$('#countries').change(function(){
+	//var value = $(this).val()
+   $.ajax({
+     url: "/get_doctors",
+     type: "GET",
+     data: {select_tag_value: $('#countries option:selected').val()}
+   })
+
+});
+</script>
+
