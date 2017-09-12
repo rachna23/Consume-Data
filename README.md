@@ -14,11 +14,9 @@ Steps for running the project.
 
 2. bundle install
 
-3. rake db:create
+3. Create application.yml file with the help of application.yml.example. Paste the same credentials there.
 
-4. Create application.yml file with the help of application.yml.example. Paste the same credentials there.
-
-5. Create the database.yml file with the help of example file.
+4. Create the database.yml file with the help of example file.
 
 * For running the test cases:  bundle exec rspec
 
