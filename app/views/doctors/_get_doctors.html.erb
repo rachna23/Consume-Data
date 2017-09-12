@@ -1,3 +1,29 @@
-Hospital name: <%= @response["data"].first["practices"].first["name"] %>
-<!--"Digestive Healthcare Of Ga, P.c." -->
-<!-- "Kaiser Permanente Santa Clara Homestead", -->
+<% if @response["data"].present? %>
+  <table id="doctors" class="display" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">    
+    <thead>
+      <tr>
+        <th> Hospital Name </th>
+        <th>  Full Name </th>
+        <th> Address </th>
+        <th> Phone </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @response["data"].each do |resp| %>
+     <tr>
+      <td> <%= first_name(resp) ? first_name(resp) : "NA" %> </td>
+      <td> <%=  full_name(resp) ? full_name(resp) : "NA" %> </td>
+      <td> <%=  full_address(resp) ? full_address(resp) : "NA" %> </td>
+      <td> <%=  phone_number(resp) ? phone_number(resp) : "NA" %> </td>
+    </tr>
+
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<script>
+  $('#doctors').dataTable( {
+  } );
+</script>

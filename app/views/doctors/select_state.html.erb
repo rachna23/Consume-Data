@@ -1,20 +1,18 @@
-<%#= get_state_lists %>
-<%#= select_tag "countries", options_for_select(get_state_lists)
-                                 %>
+<div class="page-header">
+  <h2>Get doctor lists</h2>
+</div>
 
-<%= select_tag "countries", options_for_select(get_state_lists) %>
-<div id= "div1"></div>
-
-
-<script>
-$('#countries').change(function(){
-	//var value = $(this).val()
-   $.ajax({
-     url: "/get_doctors",
-     type: "GET",
-     data: {select_tag_value: $('#countries option:selected').val()}
-   })
-
-});
-</script>
+<div class="jumbotron">
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Select state</label>
+	    <div class="col-sm-10">
+	      <%= select_tag "countries", options_for_select(get_state_lists), {:class => 'form-group form-control'} %>
+	    </div>
+	    
+	    <div id= "div1"></div>
+	  </div>
+	  
+	</form>
+</div>
 

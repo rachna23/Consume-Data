@@ -1,0 +1,59 @@
+@import "twitter/bootstrap/bootstrap";
+
+// Glyphicons are not required by default, uncomment the following lines to enable them.
+//@glyphiconsEotPath: font-url("glyphicons-halflings-regular.eot");
+//@glyphiconsEotPath_iefix: font-url("glyphicons-halflings-regular.eot?#iefix");
+//@glyphiconsWoffPath: font-url("glyphicons-halflings-regular.woff");
+//@glyphiconsTtfPath: font-url("glyphicons-halflings-regular.ttf");
+//@glyphiconsSvgPath: font-url("glyphicons-halflings-regular.svg#glyphicons_halflingsregular");
+//
+//@import "twitter/bootstrap/glyphicons.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @link-color: #ff0000;
+.container
+{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.ml-1 {
+  margin-left: ($spacer-x * .25) !important;
+}
+
+.px-2 {
+  padding-left: ($spacer-x * .5) !important;
+  padding-right: ($spacer-x * .5) !important;
+}
+
+.p-3 {
+  padding: $spacer-y $spacer-x !important;
+}
