@@ -1,5 +1,7 @@
 # README
 
+It will fetch the list of all the doctors of any particular area. We need to select the state from the dropdown and it will return the doctor list of that state. 
+
 Steps for running the project.
 
 * Ruby version: ruby-2.3.1
